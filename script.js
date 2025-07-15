@@ -1,7 +1,16 @@
 function showSecret() {
+  const overlay = document.getElementById("overlay");
   const secret = document.getElementById("secretMsg");
+  overlay.classList.add("show");
   secret.classList.add("show");
   confetti();
+}
+
+function closeSecret() {
+  const overlay = document.getElementById("overlay");
+  const secret = document.getElementById("secretMsg");
+  overlay.classList.remove("show");
+  secret.classList.remove("show");
 }
 
 function downloadVideo() {
@@ -18,3 +27,4 @@ window.addEventListener("load", () => {
     console.warn("Vídeo não pode ser iniciado automaticamente:", e);
   });
 });
+
